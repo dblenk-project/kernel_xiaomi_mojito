@@ -535,7 +535,7 @@ static int tas2564_put(struct snd_kcontrol *kcontrol,
 	int ret = -1;
 
 	if (codec == NULL) {
-		pr_err("%s:codec is NULL\n", __func__);
+		pr_debug("%s:codec is NULL\n", __func__);
 		return ret;
 	}
 
@@ -545,7 +545,7 @@ static int tas2564_put(struct snd_kcontrol *kcontrol,
 	p_tas256x = snd_soc_codec_get_drvdata(codec);
 #endif
 	if (p_tas256x == NULL) {
-		pr_err("%s:p_tas256x is NULL\n", __func__);
+		pr_debug("%s:p_tas256x is NULL\n", __func__);
 		return ret;
 	}
 
@@ -574,7 +574,7 @@ static int tas2564_get(struct snd_kcontrol *kcontrol,
 	struct tas256x_priv *p_tas256x = NULL;
 
 	if (codec == NULL) {
-		pr_err("%s:codec is NULL\n", __func__);
+		pr_debug("%s:codec is NULL\n", __func__);
 		return ret;
 	}
 
@@ -584,7 +584,7 @@ static int tas2564_get(struct snd_kcontrol *kcontrol,
 	p_tas256x = snd_soc_codec_get_drvdata(codec);
 #endif
 	if (p_tas256x == NULL) {
-		pr_err("%s:p_tas256x is NULL\n", __func__);
+		pr_debug("%s:p_tas256x is NULL\n", __func__);
 		return ret;
 	}
 
@@ -615,7 +615,7 @@ static int tas256x_put(struct snd_kcontrol *kcontrol,
 	int ret = -1;
 
 	if ((codec == NULL) || (mc == NULL)) {
-		pr_err("%s:codec or control is NULL\n", __func__);
+		pr_debug("%s:codec or control is NULL\n", __func__);
 		return ret;
 	}
 
@@ -625,7 +625,7 @@ static int tas256x_put(struct snd_kcontrol *kcontrol,
 	p_tas256x = snd_soc_codec_get_drvdata(codec);
 #endif
 	if (p_tas256x == NULL) {
-		pr_err("%s:p_tas256x is NULL\n", __func__);
+		pr_debug("%s:p_tas256x is NULL\n", __func__);
 		return ret;
 	}
 
@@ -703,7 +703,7 @@ static int tas256x_get(struct snd_kcontrol *kcontrol,
 	int ret = -1;
 
 	if ((codec == NULL) || (mc == NULL)) {
-		pr_err("%s:codec or control is NULL\n", __func__);
+		pr_debug("%s:codec or control is NULL\n", __func__);
 		return ret;
 	}
 
@@ -713,7 +713,7 @@ static int tas256x_get(struct snd_kcontrol *kcontrol,
 	p_tas256x = snd_soc_codec_get_drvdata(codec);
 #endif
 	if (p_tas256x == NULL) {
-		pr_err("%s:p_tas256x is NULL\n", __func__);
+		pr_debug("%s:p_tas256x is NULL\n", __func__);
 		return ret;
 	}
 
@@ -788,7 +788,7 @@ static int tas256x_multi_put(struct snd_kcontrol *kcontrol,
 	int ret = -1;
 
 	if ((codec == NULL) || (mc == NULL)) {
-		pr_err("%s:codec or control is NULL\n", __func__);
+		pr_debug("%s:codec or control is NULL\n", __func__);
 		return ret;
 	}
 
@@ -798,7 +798,7 @@ static int tas256x_multi_put(struct snd_kcontrol *kcontrol,
 	p_tas256x = snd_soc_codec_get_drvdata(codec);
 #endif
 	if (p_tas256x == NULL) {
-		pr_err("%s:p_tas256x is NULL\n", __func__);
+		pr_debug("%s:p_tas256x is NULL\n", __func__);
 		return ret;
 	}
 
@@ -837,7 +837,7 @@ static int tas256x_multi_get(struct snd_kcontrol *kcontrol,
 	int ret = -1;
 
 	if ((codec == NULL) || (mc == NULL)) {
-		pr_err("%s:codec or control is NULL\n", __func__);
+		pr_debug("%s:codec or control is NULL\n", __func__);
 		return ret;
 	}
 
@@ -847,7 +847,7 @@ static int tas256x_multi_get(struct snd_kcontrol *kcontrol,
 	p_tas256x = snd_soc_codec_get_drvdata(codec);
 #endif
 	if (p_tas256x == NULL) {
-		pr_err("%s:p_tas256x is NULL\n", __func__);
+		pr_debug("%s:p_tas256x is NULL\n", __func__);
 		return ret;
 	}
 
@@ -880,12 +880,12 @@ static int tas256x_enum_get(struct snd_kcontrol *kcontrol,
 	struct tas256x_priv *p_tas256x = NULL;
 
 	if (codec == NULL) {
-		pr_err("%s:codec is NULL\n", __func__);
+		pr_debug("%s:codec is NULL\n", __func__);
 		return ret;
 	}
 
 	if (ucontrol == NULL) {
-		pr_err("%s:ucontrol is NULL\n", __func__);
+		pr_debug("%s:ucontrol is NULL\n", __func__);
 		return ret;
 	}
 
@@ -895,7 +895,7 @@ static int tas256x_enum_get(struct snd_kcontrol *kcontrol,
 	p_tas256x = snd_soc_codec_get_drvdata(codec);
 #endif
 	if (p_tas256x == NULL) {
-		pr_err("%s:p_tas256x is NULL\n", __func__);
+		pr_debug("%s:p_tas256x is NULL\n", __func__);
 		return ret;
 	}
 
@@ -968,7 +968,7 @@ static int tas256x_enum_put(struct snd_kcontrol *kcontrol,
 	int ret = -1;
 
 	if ((codec == NULL) || (mc == NULL)) {
-		pr_err("%s:codec or control is NULL\n", __func__);
+		pr_debug("%s:codec or control is NULL\n", __func__);
 		return ret;
 	}
 
@@ -978,7 +978,7 @@ static int tas256x_enum_put(struct snd_kcontrol *kcontrol,
 	p_tas256x = snd_soc_codec_get_drvdata(codec);
 #endif
 	if (p_tas256x == NULL) {
-		pr_err("%s:p_tas256x is NULL\n", __func__);
+		pr_debug("%s:p_tas256x is NULL\n", __func__);
 		return ret;
 	}
 
@@ -1188,7 +1188,7 @@ static int tas2564_probe(struct tas256x_priv *p_tas256x,
 	int ret = -1;
 
 	if ((!p_tas256x) || (!codec)) {
-		pr_err("tas256x:%s p_tas256x or codec is Null\n", __func__);
+		pr_debug("tas256x:%s p_tas256x or codec is Null\n", __func__);
 		return ret;
 	}
 	dev_dbg(p_tas256x->dev, "%s channel %d", __func__, chn);
@@ -1217,7 +1217,7 @@ static int tas2562_probe(struct tas256x_priv *p_tas256x,
 	int ret = -1;
 
 	if ((!p_tas256x) || (!codec)) {
-		pr_err("tas256x:%s p_tas256x or codec is Null\n", __func__);
+		pr_debug("tas256x:%s p_tas256x or codec is Null\n", __func__);
 		return ret;
 	}
 	dev_dbg(p_tas256x->dev, "%s channel %d", __func__, chn);
@@ -1280,7 +1280,7 @@ static void tas256x_hw_reset(struct tas256x_priv *p_tas256x)
 	}
 	msleep(20);
 
-	dev_info(p_tas256x->dev, "reset gpio up !!\n");
+	dev_dbg(p_tas256x->dev, "reset gpio up !!\n");
 }
 
 void tas256x_enable_irq(struct tas256x_priv *p_tas256x, bool enable)
@@ -1302,7 +1302,7 @@ void tas256x_enable_irq(struct tas256x_priv *p_tas256x, bool enable)
 						enable_irq(
 							p_tas256x->devs[i]->mn_irq);
 					else
-						dev_info(p_tas256x->dev,
+						dev_dbg(p_tas256x->dev,
 							"### irq already enabled");
 				} else {
 					enable_irq(p_tas256x->devs[i]->mn_irq);
@@ -1334,7 +1334,7 @@ static void irq_work_routine(struct work_struct *work)
 	int irqreg, irqreg2, i, chnTemp = 0;
 	enum channel chn = channel_left;
 
-	dev_info(p_tas256x->dev, "%s\n", __func__);
+	dev_dbg(p_tas256x->dev, "%s\n", __func__);
 #ifdef CONFIG_TAS256X_CODEC
 	mutex_lock(&p_tas256x->codec_lock);
 #endif
@@ -1344,12 +1344,12 @@ static void irq_work_routine(struct work_struct *work)
 		goto reload;
 
 	if (p_tas256x->mb_runtime_suspend) {
-		dev_info(p_tas256x->dev, "%s, Runtime Suspended\n", __func__);
+		dev_dbg(p_tas256x->dev, "%s, Runtime Suspended\n", __func__);
 		goto end;
 	}
 
 	if (p_tas256x->mn_power_state == TAS256X_POWER_SHUTDOWN) {
-		dev_info(p_tas256x->dev, "%s, device not powered\n", __func__);
+		dev_dbg(p_tas256x->dev, "%s, device not powered\n", __func__);
 		goto end;
 	}
 
@@ -1426,17 +1426,17 @@ static void irq_work_routine(struct work_struct *work)
 
 			tas256x_interrupt_read(p_tas256x,
 				&irqreg, &irqreg2, channel_left);
-			dev_info(p_tas256x->dev, "IRQ reg is: %s %d, %d\n",
+			dev_dbg(p_tas256x->dev, "IRQ reg is: %s %d, %d\n",
 				__func__, irqreg, __LINE__);
 			tas256x_interrupt_read(p_tas256x,
 				&irqreg, &irqreg2, channel_right);
-			dev_info(p_tas256x->dev, "IRQ reg is: %s %d, %d\n",
+			dev_dbg(p_tas256x->dev, "IRQ reg is: %s %d, %d\n",
 				__func__, irqreg, __LINE__);
 
 #ifdef CONFIG_TAS256X_REGBIN_PARSER
 			tas256x_select_cfg_blk(p_tas256x, p_tas256x->profile_cfg_id,
 				TAS256X_BIN_BLK_PRE_POWER_UP);
-			dev_info(p_tas256x->dev, "IRQ reg is: %s tas256x_select_cfg_blk %d\n",
+			dev_dbg(p_tas256x->dev, "IRQ reg is: %s tas256x_select_cfg_blk %d\n",
 				__func__, __LINE__);
 
 #endif
@@ -1444,7 +1444,7 @@ static void irq_work_routine(struct work_struct *work)
 			if (n_result < 0)
 				goto reload;
 
-			dev_info(p_tas256x->dev, "set ICN to -80dB\n");
+			dev_dbg(p_tas256x->dev, "set ICN to -80dB\n");
 			n_result = tas256x_icn_data(p_tas256x, chn);
 
 			n_counter--;
@@ -1475,7 +1475,7 @@ static void irq_work_routine(struct work_struct *work)
 #ifdef CONFIG_TAS256X_REGBIN_PARSER
 		tas256x_select_cfg_blk(p_tas256x, p_tas256x->profile_cfg_id,
 			TAS256X_BIN_BLK_POST_POWER_UP);
-		dev_info(p_tas256x->dev, "IRQ reg is: %s tas256x_select_cfg_blk %d\n",
+		dev_dbg(p_tas256x->dev, "IRQ reg is: %s tas256x_select_cfg_blk %d\n",
 			__func__, __LINE__);
 #endif
 
@@ -1498,29 +1498,29 @@ static void init_work_routine(struct work_struct *work)
 		container_of(work, struct tas256x_priv, init_work.work);
 	int nResult = 0;
 	//int irqreg;
-	//dev_info(p_tas256x->dev, "%s\n", __func__);
+	//dev_dbg(p_tas256x->dev, "%s\n", __func__);
 #ifdef CONFIG_TAS256X_CODEC
 	mutex_lock(&p_tas256x->codec_lock);
 #endif
 #ifdef CONFIG_TAS256X_REGBIN_PARSER
 	tas256x_select_cfg_blk(p_tas256x, p_tas256x->profile_cfg_id, 
 		TAS256X_BIN_BLK_PRE_POWER_UP);
-	dev_info(p_tas256x->dev, "IRQ reg is: %s tas256x_select_cfg_blk %d\n",
+	dev_dbg(p_tas256x->dev, "IRQ reg is: %s tas256x_select_cfg_blk %d\n",
 		__func__, __LINE__);
 #endif
 	nResult = tas256x_set_power_up(p_tas256x, channel_both);
 
-	//dev_info(p_tas256x->dev, "set ICN to -80dB\n");
+	//dev_dbg(p_tas256x->dev, "set ICN to -80dB\n");
 	nResult = tas256x_icn_data(p_tas256x, channel_both);
 
 	nResult = gpio_get_value(p_tas256x->devs[0]->mn_irq_gpio);
-	/*dev_info(p_tas256x->dev, "%s, irq GPIO state: %d\n",
+	/*dev_dbg(p_tas256x->dev, "%s, irq GPIO state: %d\n",
 	 *	__func__, nResult);
 	 */
 #ifdef CONFIG_TAS256X_REGBIN_PARSER
 	tas256x_select_cfg_blk(p_tas256x, p_tas256x->profile_cfg_id,
 		TAS256X_BIN_BLK_POST_POWER_UP);
-	dev_info(p_tas256x->dev, "IRQ reg is: %s tas256x_select_cfg_blk %d\n",
+	dev_dbg(p_tas256x->dev, "IRQ reg is: %s tas256x_select_cfg_blk %d\n",
 		__func__, __LINE__);
 #endif
 
@@ -1598,7 +1598,7 @@ struct tas256x_priv *g_p_tas256x;
 
 void tas256x_software_reset(void *prv_data)
 {
-	pr_err("[TI-SmartPA:%s]\n", __func__);
+	pr_debug("[TI-SmartPA:%s]\n", __func__);
 	schedule_delayed_work(&g_p_tas256x->dc_work, msecs_to_jiffies(10));
 }
 
@@ -1607,7 +1607,7 @@ static void dc_work_routine(struct work_struct *work)
 	struct tas256x_priv *p_tas256x =
 		container_of(work, struct tas256x_priv, dc_work.work);
 
-	pr_err("[TI-SmartPA:%s] DC in channel = %d\n", __func__,
+	pr_debug("[TI-SmartPA:%s] DC in channel = %d\n", __func__,
 		s_dc_detect.channel);
 #ifdef CONFIG_TAS2562_CODEC
 	mutex_lock(&p_tas256x->codec_lock);
@@ -1730,8 +1730,8 @@ static int tas256x_i2c_probe(struct i2c_client *p_client,
 	int n_result = 0;
 	int i = 0;
 
-	dev_info(&p_client->dev, "Driver Tag: %s\n", TAS256X_DRIVER_TAG);
-	dev_info(&p_client->dev, "%s enter\n", __func__);
+	dev_dbg(&p_client->dev, "Driver Tag: %s\n", TAS256X_DRIVER_TAG);
+	dev_dbg(&p_client->dev, "%s enter\n", __func__);
 
 	p_tas256x = devm_kzalloc(&p_client->dev,
 		sizeof(struct tas256x_priv), GFP_KERNEL);
@@ -1795,14 +1795,14 @@ static int tas256x_i2c_probe(struct i2c_client *p_client,
 
 	tas256x_hw_reset(p_tas256x);
 
-	dev_info(&p_client->dev, "Before SW reset\n");
+	dev_dbg(&p_client->dev, "Before SW reset\n");
 	/* Reset the chip */
 	n_result = tas56x_software_reset(p_tas256x, channel_both);
 	if (n_result < 0) {
 		dev_err(&p_client->dev, "I2c fail, %d\n", n_result);
 		goto err;
 	}
-	dev_info(&p_client->dev, "After SW reset\n");
+	dev_dbg(&p_client->dev, "After SW reset\n");
 
 	for (i = 0; i < p_tas256x->mn_channels; i++) {
 		n_result = tas56x_get_chipid(p_tas256x,
@@ -1859,7 +1859,7 @@ static int tas256x_i2c_probe(struct i2c_client *p_client,
 
 			p_tas256x->devs[i]->mn_irq =
 				gpio_to_irq(p_tas256x->devs[i]->mn_irq_gpio);
-			dev_info(p_tas256x->dev, "irq = %d\n",
+			dev_dbg(p_tas256x->dev, "irq = %d\n",
 				p_tas256x->devs[i]->mn_irq);
 
 			n_result = request_threaded_irq(
@@ -1917,7 +1917,7 @@ static int tas256x_i2c_remove(struct i2c_client *p_client)
 	int i = 0;
 	struct tas256x_priv *p_tas256x = i2c_get_clientdata(p_client);
 
-	dev_info(p_tas256x->dev, "%s\n", __func__);
+	dev_dbg(p_tas256x->dev, "%s\n", __func__);
 
 #ifdef CONFIG_TAS256X_CODEC
 	tas256x_deregister_codec(p_tas256x);
