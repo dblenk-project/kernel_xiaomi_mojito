@@ -9,7 +9,7 @@ jobs:
           command: |
            git config --global user.name "venom-stark"
            git config --global user.email "sachidanandabehera562@gmail.com"
-           git clone --depth=1 https://venom-stark:$GITHUB_TOKEN@github.com/venom-stark/kernel_xiaomi_mojito-test -b ${CIRCLE_BRANCH} .
+           git clone --depth=1 https://github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME} -b ${CIRCLE_BRANCH} .
            bash .circleci/kramel.sh
 workflows:
   version: 2.1
